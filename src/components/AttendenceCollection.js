@@ -29,13 +29,6 @@ const AttendenceCollection = ({type}) => {
 
     const employees = Object.keys(employeeList) || [];
     const getemployeeUIList = employees.map(employeeKey => <li key={`li-${employeeKey}`}>{`${employeeKey} - ${employeeList[employeeKey]}`}</li>);
-    // const getemployeeUIList = () => {
-    //     if(employees.length> 0 ){
-    //        return  employees.map((employeeKey)=>{<li key={`${employeeKey}`}> {`${employeeKey - employeeList[employeeKey]}`}</li>
-    //                 })
-    //     }
-    //     return <li></li>
-    //     }
     return (
         <>
         <h1 className="header">{`${type} employee attendence`}</h1>

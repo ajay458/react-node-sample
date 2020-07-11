@@ -67,12 +67,15 @@ app.post('/saveattendence', async (req, res) => {
                     if(err){
                         console.log(err);
                     }
-                    res.status("ok");
+                    console.log("reaching write");
+                    res.status(200);
+                    res.send();
                 }); 
             });
         }catch(error){
             console.log(error);
             res.status(error);
+            res.send();
         }
     }else{//file not exists
         const data = await JSON.stringify(body.attendence);
@@ -81,7 +84,8 @@ app.post('/saveattendence', async (req, res) => {
             if(err){
                 console.log(err);
             }
-            res.status("ok");
+            res.status(200);
+            res.send();
         });        
     }
     
